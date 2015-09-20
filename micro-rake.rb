@@ -4,13 +4,11 @@
    	@deps = deps
    	@block = block
    	end
-
    	def invoke
    		return if @already_run
    		@deps.each do |deps| TASK[dep].invoke end
    			execute
    	end
-   	
    	def execute
 	  @action.call
    end 
